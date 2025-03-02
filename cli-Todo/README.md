@@ -27,10 +27,6 @@ python --version
 
 This To-Do List CLI app is designed to efficiently manage tasks using **Python and UV**. It operates through a **command-line interface (CLI)**, allowing users to interact with the application seamlessly.  
 
-1️⃣ Tasks are stored in a JSON file (todo.json) for persistence.
-2️⃣ The CLI commands interact with this file to add, list, complete, and remove tasks.
-3️⃣ UV handles the command-line interface in an elegant way, making interactions simple and user-friendly.
-
 ---
 
 ## 🔹 Step-by-Step Workflow  
@@ -41,7 +37,9 @@ This To-Do List CLI app is designed to efficiently manage tasks using **Python a
      ```bash
      uv todo add "Complete Python project"
      ```
-   - The app receives the command and processes the request.  
+   - The app receives the command and processes the request.
+
+     
 
 2️⃣ **Tasks Are Stored in a JSON File**  
    - When a new task is added, it is saved in a `todo.json` file.  
@@ -52,7 +50,9 @@ This To-Do List CLI app is designed to efficiently manage tasks using **Python a
        {"task": "Read a book", "completed": false}
      ]
      ```
-   - This ensures that tasks are **persistent** even after closing the app.  
+   - This ensures that tasks are **persistent** even after closing the app.
+
+     
 
 3️⃣ **Listing Tasks**  
    - The `list` command retrieves and displays all tasks from the JSON file.  
@@ -66,6 +66,8 @@ This To-Do List CLI app is designed to efficiently manage tasks using **Python a
      1. Complete Python project ❌
      2. Read a book ❌
      ```
+
+
 
 4️⃣ **Marking a Task as Completed**  
    - When a user runs the `complete` command, the selected task is updated in the JSON file.  
@@ -86,6 +88,8 @@ This To-Do List CLI app is designed to efficiently manage tasks using **Python a
      1. ✅ Complete Python project
      2. Read a book ❌
      ```
+
+     
 
 5️⃣ **Removing a Task**  
    - The `remove` command deletes a task from `todo.json`.  
