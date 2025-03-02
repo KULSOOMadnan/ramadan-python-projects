@@ -1,0 +1,10 @@
+[
+    {
+        "task": "I have nothing to write",
+        "completed": true
+    },
+    {
+        "task": "I will complete my Todo list after 5 mins",
+        "completed": false
+    }
+]
