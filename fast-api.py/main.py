@@ -2,7 +2,7 @@ from fastapi import FastAPI # importing fast Api
 import random # random module 
 app = FastAPI()
 
-
+# List of side hustle ideas that users can get inspiration from
 side_hustles = [
     "Freelance Writing - Start Offering you Writting Skills online !",
     "Web Development - Create a website for your business or for yourself !",
@@ -26,6 +26,7 @@ side_hustles = [
     "Fitness Training - Train people in fitness !"
 ]
 
+# List of motivational quotes about money and success from famous people
 money_making_qoutes = [
    'The best way to predict the future is to invent it. - Alan Kay',
    'The only way to do great work is to love what you do. - Steve Jobs',
@@ -40,18 +41,28 @@ money_making_qoutes = [
 
 @app.get('/side-hustle')
 def get_side_hustle(api_key: str):
-    """Return a random side huslte ideas from the list """
+    """Return a random side huslte ideas from the list 
+    Args:
+        api_key (str): Authentication key required to access the endpoint
+    Returns:
+        dict: Contains either a random side hustle idea or an error message
+    """
     if api_key != "12345678":
         return {'error' : 'Invalid API key '}
     return {"side_hustles": random.choice(side_hustles)}
 
 @app.get('/money_quotes')
 def get_money_quotes(api_key : str):
-    """Return a random money making qoute from the list """
+    """Return a random money making qoute from the list
+    Args:
+        api_key (str): Authentication key required to access the endpoint
+    Returns:
+        dict: Contains either a random motivational quote or an error message
+    """
     if api_key != '7890':
         return {'error' : 'Invalid API Key'}
     return{"money_quotes": random.choice(money_making_qoutes)}
 
 
+# Entry point for running the FastAPI application
 # if __name__ == "__main__":
-    
