@@ -5,8 +5,6 @@ import datetime                   # For handling dates
 import csv                       # For reading/writing CSV files
 import os          # For file operations
 
-
-
 # Define the CSV file path where mood data will be stored
 MOOD_FILE = 'mood_log.csv'            
 
