@@ -39,6 +39,13 @@ money_making_qoutes = [
    
 ]
 
+
+@app.get("/")
+def read_root():
+    return {
+        "message": "Hello World, Go to /side_hustles>api_key=12345678 or /money_quotes?api_key=7890 to get a random side hustle or money quote"
+    }
+
 @app.get('/side-hustle')
 def get_side_hustle(api_key: str):
     """Return a random side huslte ideas from the list 
