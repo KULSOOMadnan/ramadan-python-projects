@@ -43,7 +43,7 @@ money_making_qoutes = [
 @app.get("/")
 def read_root():
     return {
-        "message": "Hello World, Go to /side_hustles>api_key=12345678 or /money_quotes?api_key=7890 to get a random side hustle or money quote"
+        "message": "Hello World, Go to /side_hustles?api_key=12345678 or /money_quotes?api_key=7890 to get a random side hustle or money quote"
     }
 
 @app.get('/side-hustle')
@@ -66,7 +66,7 @@ def get_money_quotes(api_key : str):
     Returns:
         dict: Contains either a random motivational quote or an error message
     """
-    if api_key != '7890':
+    if api_key != '7890':       
         return {'error' : 'Invalid API Key'}
     return{"money_quotes": random.choice(money_making_qoutes)}
 
